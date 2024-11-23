@@ -27,4 +27,5 @@ Build into 1 single exe with no .dlls
 
 ## Resized screenshots 
 main window screenshot
-<img src="[image-url](https://github.com/user-attachments/assets/88799a1b-c8de-47e6-9be9-06b3dc661bc3)" alt="Main window screenshot" width="300" height="200">
+
+<img src="https://github.com/user-attachments/assets/88799a1b-c8de-47e6-9be9-06b3dc661bc3" alt="Alt Text" width="300" height="200">
