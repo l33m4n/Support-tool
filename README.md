@@ -14,7 +14,7 @@ Build into 1 single exe with no .dlls
 
 
 ## Documentation 
- Settings file is stored in C:\Users\$USERNAME$\AppData\Roaming\CopyPastaSettings\CopypastaSettings.txt
+ Settings file is stored in `C:\Users\$USERNAME$\AppData\Roaming\CopyPastaSettings\CopypastaSettings.txt`
 
 
 ## Screenshots 
