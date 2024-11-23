@@ -1,0 +1,143 @@
+﻿<Window
+    x:Class="Support_tool.NotepadWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Support_tool"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    mc:Ignorable="d"
+    Title="NotepadWindow"
+    Height="410"
+    Width="820"
+    Background="{DynamicResource MaterialDesignPaper}"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    AllowsTransparency="True">
+
+    <!-- Customizing the Title Bar with WindowChrome -->
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0"
+                      CornerRadius="0"
+                      ResizeBorderThickness="5"
+                      GlassFrameThickness="0"
+                      UseAeroCaptionButtons="False"/>
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- Title bar height -->
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Custom Title Bar -->
+        <DockPanel Grid.Row="0" Background="{DynamicResource MaterialDesignBackground}" MouseDown="TitleBar_MouseDown">
+            <!-- Window Title -->
+            <TextBlock Text="NotepadWindow"
+               VerticalAlignment="Center"
+               Margin="10,0,0,0"
+               Foreground="{DynamicResource MaterialDesignBody}" 
+               DockPanel.Dock="Left"/>
+
+            <!-- Space to push the buttons to the right -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <!-- Minimize Button -->
+                <Button x:Name="minimizeButton"
+                Content="_"
+                Width="40"
+                Height="30"
+                HorizontalAlignment="Right"
+                Margin="0,0,5,0"
+                VerticalAlignment="Center"
+                Foreground="{DynamicResource MaterialDesignBody}"
+                Click="minimizeButton_Click" />
+
+                <!-- Maximize/Restore Button -->
+                <Button x:Name="maximizeButton"
+                Content="⬜"
+                Width="45"
+                Height="30"
+                HorizontalAlignment="Right"
+                Margin="0,0,5,0"
+                VerticalAlignment="Center"
+                Foreground="{DynamicResource MaterialDesignBody}"
+                Click="maximizeButton_Click" />
+
+                <!-- Close Button -->
+                <Button x:Name="closeButton"
+                Content="X"
+                Width="40"
+                Height="30"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Foreground="{DynamicResource MaterialDesignBody}"
+                Click="closeButton_Click"/>
+            </StackPanel>
+        </DockPanel>
+
+
+        <!-- Main content of the window -->
+        <Grid Grid.Row="1" Margin="0,0,0,8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="117*"/>
+                <ColumnDefinition Width="43*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Always on Top Checkbox -->
+            <CheckBox x:Name="topmostCheckbox"
+                      Grid.Column="1"
+                      Content="Always on top?"
+                      HorizontalAlignment="Left"
+                      Margin="10,10,0,0"
+                      VerticalAlignment="Top"
+                      Height="18"
+                      Width="102"
+                      Foreground="{DynamicResource MaterialDesignBody}"
+                      Checked="topmostCheckbox_Checked"
+                      Unchecked="topmostCheckbox_Unchecked"/>
+
+            <!-- Autosave Checkbox -->
+            <CheckBox x:Name="autosaveCheckbox"
+                      Grid.Column="1"
+                      Content="Autosave?"
+                      HorizontalAlignment="Left"
+                      Margin="10,46,0,0"
+                      VerticalAlignment="Top"
+                      Height="18"
+                      Width="76"
+                      Foreground="{DynamicResource MaterialDesignBody}"
+                      Checked="autosaveCheckbox_Checked"/>
+
+            <!-- Material Design Card for RichTextBox -->
+            <materialDesign:Card HorizontalAlignment="Center" Margin="20,20,20,20">
+                <Grid>
+                    <RichTextBox x:Name="notepadRichTextbox"
+                                 Foreground="{DynamicResource MaterialDesignBody}" Margin="5,5,5,5">
+                        <FlowDocument>
+                            <Paragraph LineHeight="3">
+                                <Run Text="RichTextBox"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Grid>
+            </materialDesign:Card>
+
+            <!-- Exit Button -->
+            <Button x:Name="exitButton"
+                    Content="Exit"
+                    HorizontalAlignment="Left"
+                    Margin="10,0,0,27"
+                    VerticalAlignment="Bottom"
+                    Grid.Column="1"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    Click="exitButton_Click" Grid.Row="1" Width="152.886666666667"/>
+            <Button x:Name="backToMainFormButton"
+                    Grid.Column="1"
+                    Content="OPEN MAIN FORM"
+                    HorizontalAlignment="Left"
+                    Margin="10,0,0,84"
+                    VerticalAlignment="Bottom" Click="backToMainFormButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>

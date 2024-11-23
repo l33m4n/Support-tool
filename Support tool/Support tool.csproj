@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Support_tool</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+
+    <!-- Single File and Self-Contained Properties -->
+    <PublishSingleFile>true</PublishSingleFile> <!-- Bundles everything into a single .exe -->
+    <SelfContained>true</SelfContained> <!-- Includes all .NET runtime dependencies -->
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile> <!-- Compresses for smaller .exe -->
+    <ReadyToRun>true</ReadyToRun> <!-- Optimizes startup with precompiled code -->
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract> <!-- Embeds native libraries -->
+    <DebugType>embedded</DebugType> <!-- Embeds debugging info -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="3.1.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
+  </ItemGroup>
+
+</Project>
