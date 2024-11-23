@@ -16,6 +16,8 @@ Build into 1 single exe with no .dlls
 ## Documentation 
  Settings file is stored in `C:\Users\$USERNAME$\AppData\Roaming\CopyPastaSettings\CopypastaSettings.txt`
 
+ Autosaved text document from the notepad is saved to `C:\Users\$USERNAME$\Documents\Support tool auto saved notepad.txt`
+
 
 ## Screenshots 
 
