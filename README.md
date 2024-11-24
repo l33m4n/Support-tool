@@ -11,6 +11,16 @@ Build into 1 single exe with no .dlls
  
  `dotnet publish -c release -r win10-x64 -o ./publish-win10`
 
+ ## Features
+ - 4 Different themes (Green, blue, gold, purple)
+ - Dark mode / light mode
+ - Secure password copying (Clears clipboard after 15 seconds)
+ - Quick access to command prompt commands
+ - Application specific panel to store teamviewer credentials for computer counting and quick reflecting 
+ - A notepad with autosaving functionality 
+   - The notepad will resume any saved files if found in /documents
+ - Always on top on all forms 
+
 
 
 ## Documentation 
